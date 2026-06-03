@@ -1,6 +1,197 @@
+import { NavigationBar } from "basic"
+import { GuessHappiestItem } from "../components"
+import { songsListResponse } from "../models"
+
 @Component
 export default struct Find {
-  build() {
+  @State songsList: songsListResponse[] = [
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/0.jpg',
+      name: '直到世界的尽头',
+      author: 'WANDS',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/0.m4a',
+      id: '0000'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/1.jpg',
+      name: '画',
+      author: '赵磊',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/1.mp3',
+      id: '0001'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/2.jpg',
+      name: 'Sweet Dreams',
+      author: 'TPaul Sax / Eurythmics',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/2.mp3',
+      id: '0002'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/3.jpg',
+      name: '奢香夫人',
+      author: '凤凰传奇',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/3.m4a',
+      id: '0003'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/4.jpg',
+      name: '空心',
+      author: '光泽',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/4.mp3',
+      id: '0004'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/5.jpg',
+      name: '反转地球',
+      author: '潘玮柏',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/5.mp3',
+      id: '0005'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/6.jpg',
+      name: 'No.9',
+      author: 'T-ara',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/6.m4a',
+      id: '0006'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/7.jpg',
+      name: '孤独',
+      author: 'G.E.M.邓紫棋',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/7.m4a',
+      id: '0007'
+    },
 
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/8.jpg',
+      name: 'Lose Control',
+      author: 'Hedley',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/8.m4a',
+      id: '0008'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/9.jpg',
+      name: '倩女幽魂',
+      author: '张国荣',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/9.m4a',
+      id: '0009'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/10.jpg',
+      name: '北京北京',
+      author: '汪峰',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/10.m4a',
+      id: '0010'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/11.jpg',
+      name: '苦笑',
+      author: '汪苏泷',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/11.mp3',
+      id: '0011'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/12.jpg',
+      name: '一生所爱',
+      author: '卢冠廷 / 莫文蔚',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/12.m4a',
+      id: '0012'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/13.jpg',
+      name: '月半小夜曲',
+      author: '李克勤',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/13.mp3',
+      id: '0013'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/14.jpg',
+      name: 'Rolling in the Deep',
+      author: 'Adele',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/14.m4a',
+      id: '0014'
+    },
+    {
+      img: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/15.jpg',
+      name: '海阔天空',
+      author: 'Beyond',
+      url: 'http://yjy-teach-oss.oss-cn-beijing.aliyuncs.com/HeimaCloudMusic/15.m4a',
+      id: '0015'
+    }
+  ]
+  private songDataSource: SongDataSource = new SongDataSource()
+
+  aboutToAppear(): void {
+    this.songDataSource.setData(this.songsList)
+  }
+
+  build() {
+    Column() {
+      NavigationBar({
+        label: '猜你喜欢'
+      })
+      // 列表
+      List() {
+        LazyForEach(this.songDataSource, (item: songsListResponse) => {
+          ListItem() {
+            GuessHappiestItem({
+              img: item.img,
+              name: item.name,
+              author: item.author,
+              isShowPaid: true,
+              isShowRightButton: true,
+              rightButtonClick: (): void => {
+              }
+            })
+          }
+        })
+        ListItem() {
+          Row() {
+            Text('没有更多内容了').fontColor($r('[basic].color.label_color'))
+            Column().height(50)
+          }
+          .width('100%')
+          .justifyContent(FlexAlign.Center)
+          .padding(16)
+        }
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+    .padding(10)
+  }
+}
+
+export class SongDataSource implements IDataSource {
+  private dataArray: songsListResponse[] = [] // 数据源
+  private listeners: DataChangeListener[] = [] // 监听器
+  // 给框架层使用的方法
+  totalCount(): number {
+    return this.dataArray.length
+  }
+  getData(index: number): songsListResponse {
+    return this.dataArray[index]
+  }
+  registerDataChangeListener(listener: DataChangeListener): void {
+    // 注册数据变化监听器
+    if (!this.listeners.includes(listener)) {
+      this.listeners.push(listener)
+    }
+  }
+  unregisterDataChangeListener(listener: DataChangeListener): void {
+    // 移除数据变化监听器
+    const index = this.listeners.indexOf(listener)
+    if (index >= 0) {
+      this.listeners.splice(index, 1)
+    }
+  }
+  // 自己使用的方法
+  setData(data: songsListResponse[]) {
+    this.dataArray = data
+    this.listeners.forEach(listener => {
+      listener.onDataReloaded() // 数据变化触发事件
+    })
   }
 }

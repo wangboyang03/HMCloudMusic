@@ -19,6 +19,14 @@
     {
       "name": "label_color",
       "value": "#ffffff"
+    },
+    {
+      "name": "paid_label_color",
+      "value": "#bab128"
+    },
+    {
+      "name": "author_label_color",
+      "value": "#808082"
     }
   ]
 }
