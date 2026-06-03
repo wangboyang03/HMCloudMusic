@@ -1,5 +1,6 @@
 export class Constants {
   static readonly SPLASH_COUNTDOWN = 5
+  static readonly INTERVAL_TIME = 1500
   static readonly BUNDLE_NAME = "com.itheima.harmony_cloud_music"
   static readonly HOMEPAGE_MODULE = "homepage"
   static readonly PHONE_MODULE = "phone"
