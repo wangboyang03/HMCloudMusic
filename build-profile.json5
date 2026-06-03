@@ -51,6 +51,22 @@
           ]
         }
       ]
+    },
+    {
+      name: "basic",
+      srcPath: "./commons/basic"
+    },
+    {
+      "name": "homepage",
+      "srcPath": "./features/homepage",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }
