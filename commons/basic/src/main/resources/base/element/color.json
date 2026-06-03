@@ -15,6 +15,10 @@
     {
       "name": "index_background",
       "value": "#3b3f42"
+    },
+    {
+      "name": "label_color",
+      "value": "#ffffff"
     }
   ]
 }
