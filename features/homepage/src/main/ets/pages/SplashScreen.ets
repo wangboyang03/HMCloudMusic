@@ -4,8 +4,8 @@ import { Constants } from 'basic'
 @Component
 struct SplashScreen {
   // @State message: string = 'Hello World';
-  @State countDown: number = 5
-  timer: number = -1
+  @State countDown: number = Constants.SPLASH_COUNTDOWN
+  timer: number = -1 // 定时器句柄
 
   clearTimerAndRouterPush() {
     clearInterval(this.timer)

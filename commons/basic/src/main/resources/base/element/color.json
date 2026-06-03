@@ -1,0 +1,12 @@
+{
+  "color": [
+    {
+      "name": "unselected_gray",
+      "value": "#6da8a5"
+    },
+    {
+      "name": "selected_black_pink",
+      "value": "#e4608b"
+    }
+  ]
+}
