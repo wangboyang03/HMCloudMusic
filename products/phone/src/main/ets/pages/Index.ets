@@ -1,4 +1,8 @@
 import { TabBarItem } from 'basic'
+import Find from 'find/src/main/ets/views/Find'
+import Homepage from 'homepage/src/main/ets/views/Homepage'
+import Mine from 'mine/src/main/ets/views/Mine'
+import Moment from 'moment/src/main/ets/views/Moment'
 
 @Entry
 @Component
@@ -16,12 +20,22 @@ struct Index {
       Tabs({barPosition: BarPosition.End}) {
         ForEach(this.tabBarData, (item: TabBarItem, _: number)=> {
           TabContent() {
-            Text(item.label)
+            if (item.name == 'homepage') {
+              Homepage()
+            } else if (item.name == 'find') {
+              Find()
+            } else if (item.name == 'moment') {
+              Moment()
+            } else {
+              Mine()
+            }
           }.tabBar(this.tabBarBuilder(item))
+          .backgroundColor($r("[basic].color.tab_bar_background"))
         })
       }.onChange((index) => {
         this.activatedIcon = this.tabBarData[index].name
       })
+      .backgroundColor($r("[basic].color.index_background"))
     }
     .width('100%')
     .height('100%')

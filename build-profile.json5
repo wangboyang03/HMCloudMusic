@@ -67,6 +67,42 @@
           ]
         }
       ]
+    },
+    {
+      "name": "find",
+      "srcPath": "./features/find",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "moment",
+      "srcPath": "./features/moment",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mine",
+      "srcPath": "./features/mine",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }
