@@ -9,4 +9,13 @@
 /.clang-format
 /.clang-tidy
 **/.test
-/.appanalyzer
+/.appanalyzer**/oh-package-lock.json5
+**/*build-profile.json5
+**/*oh-package.json5
+# 鸿蒙编译产物
+build/
+out/
+*.lock
+*lock.json5
+*.json5
+node_modules/
