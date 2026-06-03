@@ -5,3 +5,9 @@ export interface RecommendItemResponse {
   top: ResourceColor // 顶部颜色
   bottom: ResourceColor // 底部颜色
 }
+
+export interface PlaylistItemResponse {
+  count: string // 播放数量
+  img: ResourceStr // 歌单图片
+  title: string // 歌单名称
+}
