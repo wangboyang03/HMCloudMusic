@@ -1,7 +1,8 @@
+import { songCardResponse } from "basic"
 import { NavigationBar } from "basic/src/main/ets/components/NavigationBar"
 import { MessageCard } from "../components"
 import { SongCard } from "../components/SongCard"
-import { momentListResponse, songCardResponse } from "../models"
+import { momentListResponse } from "../models"
 
 @Component
 export default struct Moment {

@@ -1,3 +1,5 @@
+import { songCardResponse } from "basic"
+
 export interface momentListResponse {
   author: string // 发布者
   avatar: string // 头像
@@ -7,10 +9,3 @@ export interface momentListResponse {
   song: songCardResponse // 音乐卡片
 }
 
-export interface songCardResponse {
-  img: string // 封面
-  name: string // 歌曲名
-  author: string // 作者
-  url: string // 播放链接
-  id: string // id
-}
