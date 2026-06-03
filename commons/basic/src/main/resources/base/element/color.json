@@ -27,6 +27,30 @@
     {
       "name": "author_label_color",
       "value": "#808082"
+    },
+    {
+      "name": "song_card_label_color",
+      "value": "#f4f4f6"
+    },
+    {
+      "name": "song_card_author_label_color",
+      "value": "#a8a8ad"
+    },
+    {
+      "name": "song_card_background_color",
+      "value": "#46474c"
+    },
+    {
+      "name": "options_icon_color",
+      "value": "#c9c8cd"
+    },
+    {
+      "name": "options_label_color",
+      "value": "#9e9da2"
+    },
+    {
+      "name": "message_line_color",
+      "value": "#292931"
     }
   ]
 }
