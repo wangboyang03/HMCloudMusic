@@ -1,4 +1,4 @@
-import { AVPlayerManager, Constants, NavigationBar } from "basic"
+import { AVPlayerManager, Constants, NavigationBar, songCardResponse } from "basic"
 import { GuessHappiestItem } from "../components"
 import { songsListResponse } from "../models"
 
@@ -132,7 +132,7 @@ export default struct Find {
       })
       // 列表
       List() {
-        LazyForEach(this.songDataSource, (item: songsListResponse) => {
+        LazyForEach(this.songDataSource, (item: songCardResponse) => {
           ListItem() {
             GuessHappiestItem({
               img: item.img,
@@ -145,7 +145,8 @@ export default struct Find {
                 this.getUIContext().getRouter().pushUrl({
                   url: Constants.PLAY_PAGE
                 })
-                AVPlayerManager.play(item.url)
+                // AVPlayerManager.play(item.url)
+                AVPlayerManager.play(item)
               },
             })
           }

@@ -1,4 +1,4 @@
-import { songCardResponse } from 'basic'
+import { AVPlayerManager, Constants, PlayerObjectItem, songCardResponse } from 'basic'
 
 @Entry
 @Component
@@ -119,7 +119,8 @@ struct PlayPage {
     }
   ] // 歌曲列表
   @State playerProgress: number = 0 // 播放进度
-  @State playState: songCardResponse = this.songs[0] // 当前播放的歌曲
+  // @State playState: songCardResponse = this.songs[0] // 当前播放的歌曲
+  @StorageProp(Constants.CURRENT_SONG_STORAGE_KEY) playState: PlayerObjectItem = new PlayerObjectItem()
 
   build() {
     // 层叠布局
@@ -219,15 +220,18 @@ struct PlayPage {
             .fontSize(12)
             .fontColor(Color.White)
           Slider({
-            value: 0,
+            value: this.playState.time,
             min: 0,
-            max: 0
+            max: this.playState.duration
           })
             .layoutWeight(1)
             .blockColor(Color.White)
             .selectedColor(Color.White)
             .trackColor('#ccc5c5c5')
             .trackThickness(2)
+            .onChange((value) => {
+              AVPlayerManager.AVPlayer?.seek(value)
+            })
           Text("00:00")
             .fontSize(12)
             .fontColor(Color.White)

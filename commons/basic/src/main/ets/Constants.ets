@@ -4,6 +4,7 @@ export class Constants {
   static readonly BUNDLE_NAME = "com.itheima.harmony_cloud_music"
   static readonly HOMEPAGE_MODULE = "homepage"
   static readonly PHONE_MODULE = "phone"
+  static readonly CURRENT_SONG_STORAGE_KEY = "current_song_storage"
 
   // 路由相关
   static readonly SPLASH_SCREEN = `@bundle:${Constants.BUNDLE_NAME}/${Constants.HOMEPAGE_MODULE}/ets/pages/SplashScreen`
