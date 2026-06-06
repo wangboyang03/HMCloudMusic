@@ -1,4 +1,4 @@
-import { TabBarItem } from 'basic'
+import { AVPlayerManager, TabBarItem } from 'basic'
 import Find from 'find/src/main/ets/views/Find'
 import Homepage from 'homepage/src/main/ets/views/Homepage'
 import Mine from 'mine/src/main/ets/views/Mine'
@@ -14,6 +14,11 @@ struct Index {
     {label: '我的', icon: $r('app.media.ic_mine'), name: 'mine'}
   ]
   @State activatedIcon: string = 'homepage'
+
+  aboutToAppear(): void {
+    // 一进入应用先初始化音频播放器
+    AVPlayerManager.init()
+  }
 
   build() {
     Column() {
