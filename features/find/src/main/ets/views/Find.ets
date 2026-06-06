@@ -1,4 +1,4 @@
-import { NavigationBar } from "basic"
+import { Constants, NavigationBar } from "basic"
 import { GuessHappiestItem } from "../components"
 import { songsListResponse } from "../models"
 
@@ -140,8 +140,10 @@ export default struct Find {
               author: item.author,
               isShowPaid: true,
               isShowRightButton: true,
-              rightButtonClick: (): void => {
-              }
+              rightButtonClick: (): void => {},
+              leftImageOnClick: () => this.getUIContext().getRouter().pushUrl({
+                url: Constants.PLAY_PAGE
+              }),
             })
           }
         })

@@ -8,4 +8,5 @@ export class Constants {
   // 路由相关
   static readonly SPLASH_SCREEN = `@bundle:${Constants.BUNDLE_NAME}/${Constants.HOMEPAGE_MODULE}/ets/pages/SplashScreen`
   static readonly INDEX_PAGE = `@bundle:${Constants.BUNDLE_NAME}/${Constants.PHONE_MODULE}/ets/pages/Index`
+  static readonly PLAY_PAGE = `@bundle:${Constants.BUNDLE_NAME}/${Constants.HOMEPAGE_MODULE}/ets/pages/PlayPage`
 }
